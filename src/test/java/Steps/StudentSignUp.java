@@ -51,22 +51,6 @@ public class StudentSignUp {
 
     @Given("Student is at the SignUp page via facebook")
     public void studentIsAtTheSignUpPageViaFacebook() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\vishal_kp\\IdeaProjects\\chromedriver_win32\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get("https://ibbuali.learnyst.com/");
-        driver.manage().window().maximize();
-
-        //driver.fin
-        WebElement login = driver.findElement(By.xpath("//p[contains(text(),\"TRY NOW FOR FREE\")]/parent::button"));
-        login.click();
-        driver.manage().timeouts().implicitlyWait(5l, TimeUnit.SECONDS);
-
-        driver.findElement(By.xpath("//button[text()=\" Signup with facebook \"]")).click();
-       // driver.manage().timeouts().implicitlyWait(5l, TimeUnit.SECONDS);
-        driver.switchTo().window("popupHandle").findElement(By.id("email")).sendKeys("9738900295");
-        driver.switchTo().window("popupHandle").findElement(By.id("pass")).sendKeys("123pass");
-        driver.manage().timeouts().implicitlyWait(5l, TimeUnit.SECONDS);
-
 
     }
 
